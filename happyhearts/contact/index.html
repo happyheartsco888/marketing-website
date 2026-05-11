@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Happy Hearts Co.</title>
+  <meta name="description" content="Get in touch with Happy Hearts Co. — for vendor enquiries, venue partnerships, media and general questions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 5rem;
+      padding: 5rem 5vw;
+      align-items: start;
+    }
+    .contact-info h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--espresso); margin-bottom: 1.5rem; }
+    .contact-info p { font-family: 'Lora', serif; font-size: 0.95rem; line-height: 1.8; color: var(--warm-grey); margin-bottom: 2rem; }
+    .contact-channel {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(196,54,112,0.07);
+    }
+    .contact-channel-icon {
+      font-size: 1.6rem;
+      flex-shrink: 0;
+      width: 48px; height: 48px;
+      background: var(--blush-soft);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-channel h4 { font-size: 0.88rem; font-weight: 700; color: var(--espresso); margin-bottom: 0.3rem; }
+    .contact-channel a, .contact-channel span { font-size: 0.88rem; color: var(--brand); text-decoration: none; }
+    .contact-channel a:hover { text-decoration: underline; }
+    .contact-channel p { font-size: 0.8rem; color: var(--warm-grey); margin: 0.2rem 0 0; }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a href="/" class="nav-logo">
+    <span class="nav-logo-text serif">Happy Hearts Co.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/events">Events</a></li>
+    <li><a href="/gallery">Gallery</a></li>
+    <li><a href="/venues">Venues</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/vendors" class="nav-cta">Book a Stall</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-hero">
+  <span class="page-hero-eyebrow">Let's Talk</span>
+  <h1 class="page-hero-title serif">Get in Touch</h1>
+  <p class="page-hero-sub lora">Whether you're a vendor, a venue, a journalist, or just a happy shopper — we'd love to hear from you.</p>
+</div>
+
+<div class="contact-grid">
+  <!-- LEFT: Contact Info -->
+  <div class="reveal">
+    <h2 class="serif">We're Friendly, We Promise</h2>
+    <p>Our team typically responds within 1–2 business days. For urgent vendor or booking enquiries, WhatsApp is the fastest way to reach us.</p>
+
+    <div class="contact-channel">
+      <div class="contact-channel-icon">💬</div>
+      <div>
+        <h4>WhatsApp (Fastest)</h4>
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank">+91 XXXXXXXXXX</a>
+        <p>Mon–Sat, 10am–7pm IST</p>
+      </div>
+    </div>
+
+    <div class="contact-channel">
+      <div class="contact-channel-icon">📧</div>
+      <div>
+        <h4>Email</h4>
+        <a href="mailto:hello@happyhearts.co">hello@happyhearts.co</a>
+        <p>For vendor applications, partnerships &amp; press</p>
+      </div>
+    </div>
+
+    <div class="contact-channel">
+      <div class="contact-channel-icon">📸</div>
+      <div>
+        <h4>Instagram</h4>
+        <a href="https://instagram.com/happyheartsCo" target="_blank">@happyheartsCo</a>
+        <p>Follow for event announcements &amp; vendor spotlights</p>
+      </div>
+    </div>
+
+    <div class="contact-channel">
+      <div class="contact-channel-icon">📍</div>
+      <div>
+        <h4>Based In</h4>
+        <span>Bangalore, Karnataka</span>
+        <p>Operating across Bangalore · Chennai · Coimbatore · Mangalore</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Contact Form -->
+  <div class="reveal">
+    <form id="contactForm" class="contact-form" netlify>
+      <div class="form-group">
+        <label for="cName">Your Name *</label>
+        <input type="text" id="cName" name="name" placeholder="Your full name" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cEmail">Email *</label>
+          <input type="email" id="cEmail" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="cPhone">Phone / WhatsApp</label>
+          <input type="tel" id="cPhone" name="phone" placeholder="+91 98765 43210">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cSubject">I'm reaching out as a…</label>
+        <select id="cSubject" name="subject">
+          <option value="">Select…</option>
+          <option>Vendor / Small Business Owner</option>
+          <option>Mall / Venue Manager</option>
+          <option>Tech Park / Corporate</option>
+          <option>Residential Community Manager</option>
+          <option>Press / Media</option>
+          <option>Sponsor / Brand Partner</option>
+          <option>General Enquiry</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="cMessage">Your Message *</label>
+        <textarea id="cMessage" name="message" rows="5" placeholder="Tell us what you have in mind…" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:1rem;">Send Message →</button>
+      <p style="text-align:center;margin-top:1rem;font-size:0.8rem;color:var(--warm-grey);">Or message us directly on <a href="https://wa.me/91XXXXXXXXXX" style="color:var(--brand);font-weight:600;">WhatsApp</a> for the fastest response.</p>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-text serif">Happy Hearts Co.</div>
+      <p class="footer-tagline lora">Curating stages for South India's most talented businesses — one market at a time.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/happyheartsCo" class="social-btn" target="_blank">📸</a>
+        <a href="#" class="social-btn">📘</a>
+        <a href="https://wa.me/91XXXXXXXXXX" class="social-btn" target="_blank">💬</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Discover</h4><ul class="footer-links"><li><a href="/events">Upcoming Events</a></li><li><a href="/events/past">Past Events</a></li><li><a href="/gallery">Gallery</a></li><li><a href="/venues">Our Venues</a></li></ul></div>
+    <div class="footer-col"><h4>For Vendors</h4><ul class="footer-links"><li><a href="/vendors">Book a Stall</a></li><li><a href="/vendors#why">Why Exhibit With Us</a></li><li><a href="/vendors#faq">FAQs</a></li><li><a href="/contact">Get in Touch</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="/about">About Vidhi</a></li><li><a href="/press">Press &amp; Media Kit</a></li><li><a href="/about#partner">Partner With Us</a></li><li><a href="/contact">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">© 2025 Happy Hearts Co. All rights reserved.</div>
+    <div class="footer-made">Made with ♥ in South India</div>
+  </div>
+</footer>
+<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Happy%20Hearts%20Co.!" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">💬</a>
+<script src="/js/main.js"></script>
+</body>
+</html>

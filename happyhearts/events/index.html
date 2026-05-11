@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events — Happy Hearts Co.</title>
+  <meta name="description" content="Browse upcoming and past flea markets, pop-ups and exhibitions by Happy Hearts Co. across Bangalore, Chennai, Coimbatore and Mangalore." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    /* Events page specific */
+    .events-filter {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2.5rem 0 3rem;
+    }
+    .filter-btn {
+      padding: 0.55rem 1.4rem;
+      border-radius: 50px;
+      border: 1.5px solid rgba(196, 54, 112, 0.2);
+      background: transparent;
+      color: var(--espresso);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--brand);
+      color: white;
+      border-color: var(--brand);
+    }
+    .events-page-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .event-date-badge {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: var(--espresso);
+      color: white;
+      text-align: center;
+      padding: 0.5rem 0.8rem;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1.3;
+      z-index: 2;
+    }
+    .event-date-badge .month { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-light); }
+    .upcoming-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: #25a865;
+      border-radius: 50%;
+      margin-right: 0.4rem;
+      animation: pulse 1.5s infinite;
+    }
+    .section-divider {
+      padding: 3rem 5vw 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .section-divider h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--espresso); white-space: nowrap; }
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(196, 54, 112, 0.15);
+    }
+    @media (max-width: 768px) {
+      .events-page-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 1024px) {
+      .events-page-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a href="/" class="nav-logo">
+    <span class="nav-logo-text serif">Happy Hearts Co.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/events">Events</a></li>
+    <li><a href="/gallery">Gallery</a></li>
+    <li><a href="/venues">Venues</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/vendors" class="nav-cta">Book a Stall</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <span class="page-hero-eyebrow">Experience the Magic</span>
+  <h1 class="page-hero-title serif">Events &amp; Markets</h1>
+  <p class="page-hero-sub lora">Curated flea markets, themed pop-ups, and brand exhibitions across South India's most vibrant venues.</p>
+</div>
+
+<!-- FILTERS -->
+<div style="padding: 0 5vw;">
+  <div class="events-filter">
+    <button class="filter-btn active">All Events</button>
+    <button class="filter-btn">Bangalore</button>
+    <button class="filter-btn">Chennai</button>
+    <button class="filter-btn">Coimbatore</button>
+    <button class="filter-btn">Mangalore</button>
+    <button class="filter-btn">Flea Markets</button>
+    <button class="filter-btn">Pop-ups</button>
+    <button class="filter-btn">Exhibitions</button>
+  </div>
+</div>
+
+<!-- UPCOMING EVENTS -->
+<div class="section-divider" style="padding-top:1rem;">
+  <h2 class="serif"><span class="upcoming-dot"></span>Upcoming Events</h2>
+</div>
+<section style="padding: 0 5vw 4rem;">
+  <div class="events-page-grid">
+    <div class="event-card reveal">
+      <div class="event-card-img">
+        <div class="event-card-bg ec-1"></div>
+        <span class="event-card-tag">Flea Market</span>
+        <div class="event-date-badge"><div class="month">Jun</div><div>14–15</div></div>
+      </div>
+      <div class="event-card-body">
+        <div class="event-card-title serif">Summer Flea — Phoenix MarketCity</div>
+        <div class="event-card-meta">
+          <span>📍 Bangalore</span>
+          <span>🕐 10am–8pm</span>
+        </div>
+        <div class="event-card-desc">Our signature summer market returns — 50+ curated stalls of fashion, home décor, food, wellness, and art. Free entry for shoppers.</div>
+        <a href="/vendors" class="btn-primary" style="margin-top:1rem;font-size:0.82rem;padding:0.6rem 1.4rem;">Book a Stall</a>
+      </div>
+    </div>
+    <div class="event-card reveal">
+      <div class="event-card-img">
+        <div class="event-card-bg ec-2"></div>
+        <span class="event-card-tag">Pop-up</span>
+        <div class="event-date-badge"><div class="month">Jun</div><div>22</div></div>
+      </div>
+      <div class="event-card-body">
+        <div class="event-card-title serif">Tech Park Weekend Market — RMZ Ecospace</div>
+        <div class="event-card-meta">
+          <span>📍 Bangalore</span>
+          <span>🕐 11am–6pm</span>
+        </div>
+        <div class="event-card-desc">A curated weekend pop-up for the tech park community — handmade gifts, artisan food, and lifestyle brands in one vibrant space.</div>
+        <a href="/vendors" class="btn-primary" style="margin-top:1rem;font-size:0.82rem;padding:0.6rem 1.4rem;">Book a Stall</a>
+      </div>
+    </div>
+    <div class="event-card reveal">
+      <div class="event-card-img">
+        <div class="event-card-bg ec-3"></div>
+        <span class="event-card-tag">Exhibition</span>
+        <div class="event-date-badge"><div class="month">Jul</div><div>5–6</div></div>
+      </div>
+      <div class="event-card-body">
+        <div class="event-card-title serif">Artisan Collective — VR Chennai</div>
+        <div class="event-card-meta">
+          <span>📍 Chennai</span>
+          <span>🕐 11am–9pm</span>
+        </div>
+        <div class="event-card-desc">A premium exhibition spotlighting women-led craft businesses — handloom, pottery, jewellery, and bespoke home goods.</div>
+        <a href="/vendors" class="btn-primary" style="margin-top:1rem;font-size:0.82rem;padding:0.6rem 1.4rem;">Book a Stall</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAST EVENTS -->
+<div class="section-divider" style="background:var(--powder);margin:0;">
+  <h2 class="serif" style="color:var(--warm-grey);">Past Events</h2>
+</div>
+<section style="padding: 2rem 5vw 5rem; background:var(--powder);">
+  <div class="events-page-grid">
+    <div class="event-card reveal" style="opacity:0.85;">
+      <div class="event-card-img">
+        <div class="event-card-bg ec-4"></div>
+        <span class="event-card-tag">Flea Market</span>
+      </div>
+      <div class="event-card-body">
+        <div class="event-card-title serif">Spring Market — Orion Mall</div>
+        <div class="event-card-meta"><span>📍 Bangalore</span><span>📅 Apr 2025</span></div>
+        <div class="event-card-desc">60+ stalls, 3,000+ footfall over two days. Featured local women entrepreneurs and home-grown food brands.</div>
+      </div>
+    </div>
+    <div class="event-card reveal" style="opacity:0.85;">
+      <div class="event-card-img">
+        <div class="event-card-bg ec-5"></div>
+        <span class="event-card-tag">Pop-up</span>
+      </div>
+      <div class="event-card-body">
+        <div class="event-card-title serif">Valentine's Pop-up — Forum Mall</div>
+        <div class="event-card-meta"><span>📍 Bangalore</span><span>📅 Feb 2025</span></div>
+        <div class="event-card-desc">A romantic-themed market with gifting brands, artisan chocolates, handmade cards, and floral designers.</div>
+      </div>
+    </div>
+    <div class="event-card reveal" style="opacity:0.85;">
+      <div class="event-card-img">
+        <div class="event-card-bg ec-6"></div>
+        <span class="event-card-tag">Exhibition</span>
+      </div>
+      <div class="event-card-body">
+        <div class="event-card-title serif">Diwali Bazaar — Prestige Shantiniketan</div>
+        <div class="event-card-meta"><span>📍 Bangalore</span><span>📅 Oct 2024</span></div>
+        <div class="event-card-desc">A festive community market celebrating the season — diyas, home décor, fashion, and traditional sweets.</div>
+      </div>
+    </div>
+    <div class="event-card reveal" style="opacity:0.85;">
+      <div class="event-card-img">
+        <div class="event-card-bg ec-1"></div>
+        <span class="event-card-tag">Flea Market</span>
+      </div>
+      <div class="event-card-body">
+        <div class="event-card-title serif">Coimbatore Summer Flea</div>
+        <div class="event-card-meta"><span>📍 Coimbatore</span><span>📅 May 2024</span></div>
+        <div class="event-card-desc">Happy Hearts Co.'s debut in Coimbatore — a packed two-day market that put local talent firmly on the map.</div>
+      </div>
+    </div>
+    <div class="event-card reveal" style="opacity:0.85;">
+      <div class="event-card-img">
+        <div class="event-card-bg ec-2"></div>
+        <span class="event-card-tag">Pop-up</span>
+      </div>
+      <div class="event-card-body">
+        <div class="event-card-title serif">Holiday Market — Express Avenue</div>
+        <div class="event-card-meta"><span>📍 Chennai</span><span>📅 Dec 2024</span></div>
+        <div class="event-card-desc">A Christmas-themed pop-up with gifting specialists, handmade ornaments, and gourmet food brands.</div>
+      </div>
+    </div>
+    <div class="event-card reveal" style="opacity:0.85;">
+      <div class="event-card-img">
+        <div class="event-card-bg ec-3"></div>
+        <span class="event-card-tag">Exhibition</span>
+      </div>
+      <div class="event-card-body">
+        <div class="event-card-title serif">Mangalore Artisan Mela</div>
+        <div class="event-card-meta"><span>📍 Mangalore</span><span>📅 Mar 2025</span></div>
+        <div class="event-card-desc">A celebration of coastal craft traditions — Mangalorean tiles, handloom, coconut-shell art, and local food brands.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="content-section" style="text-align:center;background:var(--brand);padding:4rem 5vw;">
+  <span class="section-eyebrow" style="color:var(--gold-light);">Ready to Join?</span>
+  <h2 class="section-title serif" style="color:white;margin:0.5rem 0 1rem;">Secure Your Stall at the Next Event</h2>
+  <p class="section-sub lora" style="color:rgba(255,255,255,0.8);max-width:480px;">Applications open for all upcoming markets. Limited stalls available — curated for quality and variety.</p>
+  <a href="/vendors" class="btn-white" style="margin-top:2rem;">Apply as a Vendor →</a>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-text serif">Happy Hearts Co.</div>
+      <p class="footer-tagline lora">Curating stages for South India's most talented businesses — one market at a time.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/happyheartsCo" class="social-btn" target="_blank">📸</a>
+        <a href="#" class="social-btn">📘</a>
+        <a href="https://wa.me/91XXXXXXXXXX" class="social-btn" target="_blank">💬</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Discover</h4><ul class="footer-links"><li><a href="/events">Upcoming Events</a></li><li><a href="/events/past">Past Events</a></li><li><a href="/gallery">Gallery</a></li><li><a href="/venues">Our Venues</a></li></ul></div>
+    <div class="footer-col"><h4>For Vendors</h4><ul class="footer-links"><li><a href="/vendors">Book a Stall</a></li><li><a href="/vendors#why">Why Exhibit With Us</a></li><li><a href="/vendors#faq">FAQs</a></li><li><a href="/contact">Get in Touch</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="/about">About Vidhi</a></li><li><a href="/press">Press &amp; Media Kit</a></li><li><a href="/about#partner">Partner With Us</a></li><li><a href="/contact">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">© 2025 Happy Hearts Co. All rights reserved.</div>
+    <div class="footer-made">Made with ♥ in South India</div>
+  </div>
+</footer>
+<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Happy%20Hearts%20Co.!" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">💬</a>
+<script src="/js/main.js"></script>
+<script>
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      // TODO: filter cards by data-city / data-type attributes
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Happy Hearts Co.</title>
+  <meta name="description" content="A visual journey through Happy Hearts Co. flea markets, pop-ups and exhibitions across South India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .gallery-filter {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2.5rem 0 3rem;
+    }
+    .filter-btn {
+      padding: 0.55rem 1.4rem;
+      border-radius: 50px;
+      border: 1.5px solid rgba(196, 54, 112, 0.2);
+      background: transparent;
+      color: var(--espresso);
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--brand);
+      color: white;
+      border-color: var(--brand);
+    }
+    /* Masonry-style gallery */
+    .gallery-masonry {
+      columns: 3;
+      column-gap: 1.5rem;
+      padding: 0 5vw 5rem;
+    }
+    .gallery-masonry-item {
+      break-inside: avoid;
+      margin-bottom: 1.5rem;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-masonry-item .gallery-placeholder {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+      position: relative;
+      transition: transform 0.4s ease;
+    }
+    .gallery-masonry-item:hover .gallery-placeholder { transform: scale(1.03); }
+    /* Different heights for visual variety */
+    .gallery-masonry-item:nth-child(3n+1) .gallery-placeholder { padding-bottom: 120%; }
+    .gallery-masonry-item:nth-child(3n+2) .gallery-placeholder { padding-bottom: 80%; }
+    .gallery-masonry-item:nth-child(3n+3) .gallery-placeholder { padding-bottom: 100%; }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 2rem 1.2rem 1.2rem;
+      background: linear-gradient(0deg, rgba(26,10,20,0.75) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .gallery-masonry-item:hover .gallery-caption { opacity: 1; }
+    .gallery-caption-title { font-size: 0.88rem; font-weight: 600; color: white; }
+    .gallery-caption-loc { font-size: 0.75rem; color: var(--blush); margin-top: 0.2rem; }
+    @media (max-width: 768px) {
+      .gallery-masonry { columns: 2; }
+    }
+    @media (max-width: 480px) {
+      .gallery-masonry { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a href="/" class="nav-logo">
+    <span class="nav-logo-text serif">Happy Hearts Co.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/events">Events</a></li>
+    <li><a href="/gallery">Gallery</a></li>
+    <li><a href="/venues">Venues</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/vendors" class="nav-cta">Book a Stall</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-hero">
+  <span class="page-hero-eyebrow">Behind the Markets</span>
+  <h1 class="page-hero-title serif">Our Gallery</h1>
+  <p class="page-hero-sub lora">A visual journey through 300+ events — the stalls, the smiles, and the stories that make every market magical.</p>
+</div>
+
+<!-- FILTERS -->
+<div style="padding: 0 5vw;">
+  <div class="gallery-filter">
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">Flea Markets</button>
+    <button class="filter-btn">Pop-ups</button>
+    <button class="filter-btn">Vendors</button>
+    <button class="filter-btn">Venues</button>
+    <button class="filter-btn">Bangalore</button>
+    <button class="filter-btn">Chennai</button>
+  </div>
+</div>
+
+<!-- GALLERY MASONRY -->
+<!-- 
+  TO ADD REAL PHOTOS:
+  Replace each .gallery-placeholder div with:
+  <img src="/images/gallery/your-photo.jpg" alt="Description" style="width:100%;display:block;border-radius:16px;">
+-->
+<div class="gallery-masonry">
+
+  <div class="gallery-masonry-item reveal">
+    <div class="gallery-placeholder gp-1"></div>
+    <div class="gallery-caption">
+      <div class="gallery-caption-title">Summer Flea Market</div>
+      <div class="gallery-caption-loc">📍 Phoenix MarketCity, Bangalore</div>
+    </div>
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <div class="gallery-placeholder gp-2"></div>
+    <div class="gallery-caption">
+      <div class="gallery-caption-title">Artisan Jewellery Stall</div>
+      <div class="gallery-caption-loc">📍 Forum Mall, Bangalore</div>
+    </div>
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <div class="gallery-placeholder gp-3"></div>
+    <div class="gallery-caption">
+      <div class="gallery-caption-title">Diwali Bazaar Setup</div>
+      <div class="gallery-caption-loc">📍 Prestige Shantiniketan</div>
+    </div>
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <div class="gallery-placeholder gp-4"></div>
+    <div class="gallery-caption">
+      <div class="gallery-caption-title">Home Bakers Corner</div>
+      <div class="gallery-caption-loc">📍 VR Chennai</div>
+    </div>
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <div class="gallery-placeholder gp-5"></div>
+    <div class="gallery-caption">
+      <div class="gallery-caption-title">Handmade Candles Vendor</div>
+      <div class="gallery-caption-loc">📍 Orion Mall, Bangalore</div>
+    </div>
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <div class="gallery-placeholder gp-6"></div>
+    <div class="gallery-caption">
+      <div class="gallery-caption-title">Valentine's Pop-up</div>
+      <div class="gallery-caption-loc">📍 Bangalore</div>
+    </div>
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <div class="gallery-placeholder gp-7"></div>
+    <div class="gallery-caption">
+      <div class="gallery-caption-title">Fashion &amp; Lifestyle Stalls</div>
+      <div class="gallery-caption-loc">📍 Express Avenue, Chennai</div>
+    </div>
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <div class="gallery-placeholder gp-8"></div>
+    <div class="gallery-caption">
+      <div class="gallery-caption-title">Coimbatore Summer Flea</div>
+      <div class="gallery-caption-loc">📍 Fun Republic, Coimbatore</div>
+    </div>
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <div class="gallery-placeholder gp-9"></div>
+    <div class="gallery-caption">
+      <div class="gallery-caption-title">Pottery &amp; Ceramics Exhibition</div>
+      <div class="gallery-caption-loc">📍 Mangalore</div>
+    </div>
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <div class="gallery-placeholder gp-1" style="filter:hue-rotate(60deg)"></div>
+    <div class="gallery-caption">
+      <div class="gallery-caption-title">Tech Park Weekend Market</div>
+      <div class="gallery-caption-loc">📍 RMZ Ecospace, Bangalore</div>
+    </div>
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <div class="gallery-placeholder gp-2" style="filter:hue-rotate(120deg)"></div>
+    <div class="gallery-caption">
+      <div class="gallery-caption-title">Christmas Holiday Market</div>
+      <div class="gallery-caption-loc">📍 Chennai</div>
+    </div>
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <div class="gallery-placeholder gp-3" style="filter:hue-rotate(180deg)"></div>
+    <div class="gallery-caption">
+      <div class="gallery-caption-title">Artisan Collective Exhibition</div>
+      <div class="gallery-caption-loc">📍 Bangalore</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<section style="background:var(--powder);padding:4rem 5vw;text-align:center;">
+  <span class="section-eyebrow">Want to be in the next gallery?</span>
+  <h2 class="section-title serif" style="margin-top:0.5rem;">Apply for a Stall Today</h2>
+  <p class="section-sub lora">Every vendor in our gallery started with an application. Your stall could be the next spotlight.</p>
+  <a href="/vendors" class="btn-primary" style="margin-top:2rem;">Book Your Stall →</a>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-text serif">Happy Hearts Co.</div>
+      <p class="footer-tagline lora">Curating stages for South India's most talented businesses — one market at a time.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/happyheartsCo" class="social-btn" target="_blank">📸</a>
+        <a href="#" class="social-btn">📘</a>
+        <a href="https://wa.me/91XXXXXXXXXX" class="social-btn" target="_blank">💬</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Discover</h4><ul class="footer-links"><li><a href="/events">Upcoming Events</a></li><li><a href="/events/past">Past Events</a></li><li><a href="/gallery">Gallery</a></li><li><a href="/venues">Our Venues</a></li></ul></div>
+    <div class="footer-col"><h4>For Vendors</h4><ul class="footer-links"><li><a href="/vendors">Book a Stall</a></li><li><a href="/vendors#why">Why Exhibit With Us</a></li><li><a href="/vendors#faq">FAQs</a></li><li><a href="/contact">Get in Touch</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="/about">About Vidhi</a></li><li><a href="/press">Press &amp; Media Kit</a></li><li><a href="/about#partner">Partner With Us</a></li><li><a href="/contact">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">© 2025 Happy Hearts Co. All rights reserved.</div>
+    <div class="footer-made">Made with ♥ in South India</div>
+  </div>
+</footer>
+<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Happy%20Hearts%20Co.!" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">💬</a>
+<script src="/js/main.js"></script>
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

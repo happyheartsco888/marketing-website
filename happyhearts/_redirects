@@ -1,0 +1,12 @@
+# Happy Hearts Co. — Netlify Redirects
+
+# /events/past redirects to /events (past events are shown on the same page)
+/events/past    /events    301
+
+# Redirect old/alternate paths if needed
+/book-a-stall   /vendors   301
+/contact-us     /contact   301
+/media          /press     301
+
+# 404 fallback
+/*              /index.html  404

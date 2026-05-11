@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Vidhi — Happy Hearts Co.</title>
+  <meta name="description" content="Meet Vidhi Tanna — founder of Happy Hearts Co. and the passionate curator behind 300+ events across South India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .about-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: center;
+      padding: 5rem 5vw;
+    }
+    .about-photo-wrap {
+      position: relative;
+      text-align: center;
+    }
+    .about-photo-placeholder {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 3/4;
+      border-radius: 24px;
+      background: linear-gradient(160deg, var(--blush-soft) 0%, var(--brand-light) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      font-family: 'Playfair Display', serif;
+      font-size: 8rem;
+      color: rgba(255,255,255,0.5);
+      box-shadow: 0 24px 64px rgba(196,54,112,0.25);
+    }
+    .about-photo-badge {
+      position: absolute;
+      bottom: -1.5rem; right: -1rem;
+      background: var(--gold);
+      color: var(--espresso);
+      padding: 1rem 1.5rem;
+      border-radius: 16px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(212,168,83,0.4);
+    }
+    .about-photo-badge small { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 400; }
+    .mission-values {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .value-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(196,54,112,0.06);
+    }
+    .value-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+    .value-card h3 { font-family: 'Playfair Display', serif; color: var(--brand); margin-bottom: 0.5rem; }
+    .value-card p { font-size: 0.88rem; line-height: 1.6; color: var(--warm-grey); }
+    @media (max-width: 768px) {
+      .about-hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .mission-values { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a href="/" class="nav-logo">
+    <span class="nav-logo-text serif">Happy Hearts Co.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/events">Events</a></li>
+    <li><a href="/gallery">Gallery</a></li>
+    <li><a href="/venues">Venues</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/vendors" class="nav-cta">Book a Stall</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-hero">
+  <span class="page-hero-eyebrow">The Person Behind the Markets</span>
+  <h1 class="page-hero-title serif">About Happy Hearts Co.</h1>
+</div>
+
+<!-- FOUNDER SECTION -->
+<section style="background:var(--cream);">
+  <div class="about-hero-grid">
+    <div class="about-photo-wrap reveal">
+      <div class="about-photo-placeholder">V</div>
+      <!-- Replace above div with: <img src="/images/vidhi.jpg" alt="Vidhi Tanna" style="width:100%;max-width:400px;border-radius:24px;box-shadow:0 24px 64px rgba(196,54,112,0.25);"> -->
+      <div class="about-photo-badge">
+        300+ Events
+        <small>and counting</small>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="section-eyebrow">Meet the Founder</span>
+      <h2 class="section-title serif" style="text-align:left;margin-bottom:1.5rem;">Vidhi Tanna</h2>
+      <p class="lora" style="font-size:1.1rem;line-height:1.8;color:var(--warm-grey);margin-bottom:1.2rem;">
+        Vidhi Tanna has spent over a decade in hospitality — orchestrating experiences that people talk about long after the event is over. But it was the untold stories of South India's home-grown entrepreneurs that truly set her heart on fire.
+      </p>
+      <p class="lora" style="font-size:1rem;line-height:1.8;color:var(--warm-grey);margin-bottom:1.2rem;">
+        She saw women baking extraordinary cakes from their kitchens with no platform to reach customers. She met artisans hand-crafting jewellery that rivalled luxury boutiques, selling quietly from Instagram DMs. She found home chefs with generations of recipes and nowhere to serve them.
+      </p>
+      <p class="lora" style="font-size:1rem;line-height:1.8;color:var(--warm-grey);margin-bottom:2rem;">
+        So she built the stage. Happy Hearts Co. was born as a vehicle to give South India's most talented independent businesses the audiences they deserve — in the very spaces where people shop, work, and live.
+      </p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="/contact" class="btn-primary">Work With Us</a>
+        <a href="/press" class="btn-secondary">Media Kit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="content-section alt" style="text-align:center;">
+  <span class="section-eyebrow">Why We Exist</span>
+  <h2 class="section-title serif">Our Mission</h2>
+  <p class="section-sub lora" style="font-size:1.15rem;margin:1rem auto 0;">
+    To give women entrepreneurs, artisans, home bakers, and budding small businesses a real platform — through beautifully curated markets in the spaces where South India's communities live, work, and gather.
+  </p>
+  <div class="mission-values">
+    <div class="value-card reveal">
+      <span class="value-icon">♀️</span>
+      <h3>Women First</h3>
+      <p>We actively prioritise women-led businesses in our vendor selection — because visibility is the first step to success.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-icon">✨</span>
+      <h3>Quality Curation</h3>
+      <p>Every vendor is handpicked. We'd rather have 30 exceptional stalls than 100 mediocre ones — and our shoppers know the difference.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-icon">🤝</span>
+      <h3>Community Over Commerce</h3>
+      <p>Markets should feel like celebrations, not sales pitches. We create genuine moments of discovery between people and brands.</p>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY TIMELINE -->
+<section class="content-section" style="text-align:center;">
+  <span class="section-eyebrow">The Journey</span>
+  <h2 class="section-title serif">From One Market to 300+</h2>
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-dot serif">2014</div>
+      <div class="timeline-content">
+        <h3>The First Event</h3>
+        <p>Vidhi organises her first community market — a small weekend gathering of 15 home-based vendors in Bangalore. Every stall sells out.</p>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot serif">2016</div>
+      <div class="timeline-content">
+        <h3>Happy Hearts Co. is Born</h3>
+        <p>The brand is formalised. First mall partnerships signed in Bangalore. 40+ events in the first year under the Happy Hearts name.</p>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot serif">2018</div>
+      <div class="timeline-content">
+        <h3>Expanding to Chennai</h3>
+        <p>Happy Hearts Co. launches in Chennai with back-to-back sold-out markets at Express Avenue and VR Chennai.</p>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot serif">2020</div>
+      <div class="timeline-content">
+        <h3>Pivoting &amp; Growing Through Adversity</h3>
+        <p>The pandemic year becomes a turning point — Vidhi supports vendors through digital pop-ups and emerges with a deeper community than ever.</p>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot serif">2022</div>
+      <div class="timeline-content">
+        <h3>Coimbatore &amp; Mangalore</h3>
+        <p>Expansion into two new cities, bringing Happy Hearts Co.'s signature curation to new communities and new talent.</p>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot serif">2025</div>
+      <div class="timeline-content">
+        <h3>300+ Events &amp; Counting</h3>
+        <p>A landmark milestone — and the beginning of the next chapter, with new city launches and a growing network of 1,000+ vendor alumni.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER SECTION -->
+<section id="partner" class="content-section alt" style="text-align:center;">
+  <span class="section-eyebrow">Let's Build Together</span>
+  <h2 class="section-title serif">Partner With Happy Hearts Co.</h2>
+  <p class="section-sub lora">Whether you're a mall looking for footfall activation, a corporate wanting a unique employee experience, or a brand seeking a curated platform — let's create something memorable together.</p>
+  <div style="display:flex;gap:1.5rem;justify-content:center;margin-top:2.5rem;flex-wrap:wrap;">
+    <a href="/contact" class="btn-primary">Start a Conversation</a>
+    <a href="/press" class="btn-secondary">Download Media Kit</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-text serif">Happy Hearts Co.</div>
+      <p class="footer-tagline lora">Curating stages for South India's most talented businesses — one market at a time.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/happyheartsCo" class="social-btn" target="_blank">📸</a>
+        <a href="#" class="social-btn">📘</a>
+        <a href="https://wa.me/91XXXXXXXXXX" class="social-btn" target="_blank">💬</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Discover</h4><ul class="footer-links"><li><a href="/events">Upcoming Events</a></li><li><a href="/events/past">Past Events</a></li><li><a href="/gallery">Gallery</a></li><li><a href="/venues">Our Venues</a></li></ul></div>
+    <div class="footer-col"><h4>For Vendors</h4><ul class="footer-links"><li><a href="/vendors">Book a Stall</a></li><li><a href="/vendors#why">Why Exhibit With Us</a></li><li><a href="/vendors#faq">FAQs</a></li><li><a href="/contact">Get in Touch</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="/about">About Vidhi</a></li><li><a href="/press">Press &amp; Media Kit</a></li><li><a href="/about#partner">Partner With Us</a></li><li><a href="/contact">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">© 2025 Happy Hearts Co. All rights reserved.</div>
+    <div class="footer-made">Made with ♥ in South India</div>
+  </div>
+</footer>
+<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Happy%20Hearts%20Co.!" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">💬</a>
+<script src="/js/main.js"></script>
+</body>
+</html>
