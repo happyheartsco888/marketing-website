@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/png" href="/images/logo/favicon.png">
   <style>
     .gallery-filter {
       display: flex;
@@ -48,29 +49,8 @@
       position: relative;
       cursor: pointer;
     }
-    .gallery-masonry-item .gallery-placeholder {
-      width: 100%;
-      display: block;
-      border-radius: 16px;
-      position: relative;
-      transition: transform 0.4s ease;
-    }
-    .gallery-masonry-item:hover .gallery-placeholder { transform: scale(1.03); }
-    /* Different heights for visual variety */
-    .gallery-masonry-item:nth-child(3n+1) .gallery-placeholder { padding-bottom: 120%; }
-    .gallery-masonry-item:nth-child(3n+2) .gallery-placeholder { padding-bottom: 80%; }
-    .gallery-masonry-item:nth-child(3n+3) .gallery-placeholder { padding-bottom: 100%; }
-    .gallery-caption {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 2rem 1.2rem 1.2rem;
-      background: linear-gradient(0deg, rgba(26,10,20,0.75) 0%, transparent 100%);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .gallery-masonry-item:hover .gallery-caption { opacity: 1; }
-    .gallery-caption-title { font-size: 0.88rem; font-weight: 600; color: white; }
-    .gallery-caption-loc { font-size: 0.75rem; color: var(--blush); margin-top: 0.2rem; }
+    .gallery-masonry-item img { transition: transform 0.4s ease; }
+    .gallery-masonry-item:hover img { transform: scale(1.03); }
     @media (max-width: 768px) {
       .gallery-masonry { columns: 2; }
     }
@@ -83,7 +63,7 @@
 
 <nav id="mainNav">
   <a href="/" class="nav-logo">
-    <span class="nav-logo-text serif">Happy Hearts Co.</span>
+    <img src="/images/logo/logo-horizontal.png" alt="Happy Hearts Co." class="nav-logo-img">
   </a>
   <ul class="nav-links">
     <li><a href="/events">Events</a></li>
@@ -117,107 +97,90 @@
 </div>
 
 <!-- GALLERY MASONRY -->
-<!-- 
-  TO ADD REAL PHOTOS:
-  Replace each .gallery-placeholder div with:
-  <img src="/images/gallery/your-photo.jpg" alt="Description" style="width:100%;display:block;border-radius:16px;">
--->
 <div class="gallery-masonry">
 
   <div class="gallery-masonry-item reveal">
-    <div class="gallery-placeholder gp-1"></div>
-    <div class="gallery-caption">
-      <div class="gallery-caption-title">Summer Flea Market</div>
-      <div class="gallery-caption-loc">📍 Phoenix MarketCity, Bangalore</div>
-    </div>
+    <img src="/images/gallery/gallery-01.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
   </div>
 
   <div class="gallery-masonry-item reveal">
-    <div class="gallery-placeholder gp-2"></div>
-    <div class="gallery-caption">
-      <div class="gallery-caption-title">Artisan Jewellery Stall</div>
-      <div class="gallery-caption-loc">📍 Forum Mall, Bangalore</div>
-    </div>
+    <img src="/images/gallery/gallery-02.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
   </div>
 
   <div class="gallery-masonry-item reveal">
-    <div class="gallery-placeholder gp-3"></div>
-    <div class="gallery-caption">
-      <div class="gallery-caption-title">Diwali Bazaar Setup</div>
-      <div class="gallery-caption-loc">📍 Prestige Shantiniketan</div>
-    </div>
+    <img src="/images/gallery/gallery-03.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
   </div>
 
   <div class="gallery-masonry-item reveal">
-    <div class="gallery-placeholder gp-4"></div>
-    <div class="gallery-caption">
-      <div class="gallery-caption-title">Home Bakers Corner</div>
-      <div class="gallery-caption-loc">📍 VR Chennai</div>
-    </div>
+    <img src="/images/gallery/gallery-04.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
   </div>
 
   <div class="gallery-masonry-item reveal">
-    <div class="gallery-placeholder gp-5"></div>
-    <div class="gallery-caption">
-      <div class="gallery-caption-title">Handmade Candles Vendor</div>
-      <div class="gallery-caption-loc">📍 Orion Mall, Bangalore</div>
-    </div>
+    <img src="/images/gallery/gallery-05.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
   </div>
 
   <div class="gallery-masonry-item reveal">
-    <div class="gallery-placeholder gp-6"></div>
-    <div class="gallery-caption">
-      <div class="gallery-caption-title">Valentine's Pop-up</div>
-      <div class="gallery-caption-loc">📍 Bangalore</div>
-    </div>
+    <img src="/images/gallery/gallery-06.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
   </div>
 
   <div class="gallery-masonry-item reveal">
-    <div class="gallery-placeholder gp-7"></div>
-    <div class="gallery-caption">
-      <div class="gallery-caption-title">Fashion &amp; Lifestyle Stalls</div>
-      <div class="gallery-caption-loc">📍 Express Avenue, Chennai</div>
-    </div>
+    <img src="/images/gallery/gallery-07.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
   </div>
 
   <div class="gallery-masonry-item reveal">
-    <div class="gallery-placeholder gp-8"></div>
-    <div class="gallery-caption">
-      <div class="gallery-caption-title">Coimbatore Summer Flea</div>
-      <div class="gallery-caption-loc">📍 Fun Republic, Coimbatore</div>
-    </div>
+    <img src="/images/gallery/gallery-08.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
   </div>
 
   <div class="gallery-masonry-item reveal">
-    <div class="gallery-placeholder gp-9"></div>
-    <div class="gallery-caption">
-      <div class="gallery-caption-title">Pottery &amp; Ceramics Exhibition</div>
-      <div class="gallery-caption-loc">📍 Mangalore</div>
-    </div>
+    <img src="/images/gallery/gallery-09.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
   </div>
 
   <div class="gallery-masonry-item reveal">
-    <div class="gallery-placeholder gp-1" style="filter:hue-rotate(60deg)"></div>
-    <div class="gallery-caption">
-      <div class="gallery-caption-title">Tech Park Weekend Market</div>
-      <div class="gallery-caption-loc">📍 RMZ Ecospace, Bangalore</div>
-    </div>
+    <img src="/images/gallery/gallery-10.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
   </div>
 
   <div class="gallery-masonry-item reveal">
-    <div class="gallery-placeholder gp-2" style="filter:hue-rotate(120deg)"></div>
-    <div class="gallery-caption">
-      <div class="gallery-caption-title">Christmas Holiday Market</div>
-      <div class="gallery-caption-loc">📍 Chennai</div>
-    </div>
+    <img src="/images/gallery/gallery-11.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
   </div>
 
   <div class="gallery-masonry-item reveal">
-    <div class="gallery-placeholder gp-3" style="filter:hue-rotate(180deg)"></div>
-    <div class="gallery-caption">
-      <div class="gallery-caption-title">Artisan Collective Exhibition</div>
-      <div class="gallery-caption-loc">📍 Bangalore</div>
-    </div>
+    <img src="/images/gallery/gallery-12.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <img src="/images/gallery/gallery-13.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <img src="/images/gallery/gallery-14.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <img src="/images/gallery/gallery-15.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <img src="/images/gallery/gallery-16.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <img src="/images/gallery/gallery-17.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <img src="/images/gallery/gallery-18.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <img src="/images/gallery/gallery-19.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <img src="/images/gallery/gallery-20.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
+  </div>
+
+  <div class="gallery-masonry-item reveal">
+    <img src="/images/gallery/gallery-21.jpg" alt="Happy Hearts Co. event photo" style="width:100%;display:block;border-radius:16px;">
   </div>
 
 </div>
@@ -233,7 +196,7 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-logo-text serif">Happy Hearts Co.</div>
+      <img src="/images/logo/logo-horizontal-white.png" alt="Happy Hearts Co." class="footer-logo-img">
       <p class="footer-tagline lora">Curating stages for South India's most talented businesses — one market at a time.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/happyheartsco.official?igsh=eXF6MTNpY3drdnB5" class="social-btn" target="_blank">📸</a>

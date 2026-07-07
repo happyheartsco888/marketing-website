@@ -308,10 +308,10 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(196, 54, 112, 0.08); }
   transition: transform 0.5s ease;
 }
 .hero-tile:hover .tile-bg { transform: scale(1.05); }
-.tb-1 { background: linear-gradient(135deg, #f9c6d6 0%, #e8a0bc 100%); }
-.tb-2 { background: linear-gradient(135deg, #fde8d0 0%, #f0c8a0 100%); }
-.tb-3 { background: linear-gradient(135deg, #d6e8f0 0%, #a8c8dc 100%); }
-.tb-4 { background: linear-gradient(135deg, #e0d6f0 0%, #c0a8dc 100%); }
+.tb-1 { background: url('/images/banner/flea-market.jpg') center/cover; }
+.tb-2 { background: url('/images/banner/pop-ups.jpg') center/cover; }
+.tb-3 { background: url('/images/banner/exhibitions.jpg') center/cover; }
+.tb-4 { background: url('/images/banner/themed-events.jpg') center/cover; }
 .tile-label {
   position: relative;
   z-index: 2;
@@ -460,12 +460,12 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(196, 54, 112, 0.08); }
   transition: transform 0.5s ease;
 }
 .event-card:hover .event-card-bg { transform: scale(1.06); }
-.ec-1 { background: linear-gradient(135deg, #f9c6d6 0%, #c43670 100%); }
-.ec-2 { background: linear-gradient(135deg, #fde8d0 0%, #D4A853 100%); }
-.ec-3 { background: linear-gradient(135deg, #e0f0d6 0%, #5a9e40 100%); }
-.ec-4 { background: linear-gradient(135deg, #d6e8f0 0%, #4080a8 100%); }
-.ec-5 { background: linear-gradient(135deg, #e8d6f0 0%, #9040a8 100%); }
-.ec-6 { background: linear-gradient(135deg, #f0e8d6 0%, #a87840 100%); }
+.ec-1 { background: url('/images/cards/curated-flea-markets.jpg') center/cover; }
+.ec-2 { background: url('/images/cards/themed-popup-events.jpg') center/cover; }
+.ec-3 { background: url('/images/cards/brand-exhibitions.jpg') center/cover; }
+.ec-4 { background: url('/images/cards/mall-tech-activations.jpg') center/cover; }
+.ec-5 { background: url('/images/cards/women-entrepreneur-spotlights.jpg') center/cover; }
+.ec-6 { background: url('/images/cards/bespoke-events.jpg') center/cover; }
 .event-card-tag {
   position: absolute;
   top: 1rem; left: 1rem;
@@ -616,10 +616,10 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(196, 54, 112, 0.08); }
   transition: transform 0.5s ease;
 }
 .city-card:hover .city-bg { transform: scale(1.06); }
-.cb-1 { background: linear-gradient(160deg, #f9c6d6 0%, #c43670 100%); }
-.cb-2 { background: linear-gradient(160deg, #fde8c6 0%, #c48040 100%); }
-.cb-3 { background: linear-gradient(160deg, #c6f0d6 0%, #40a860 100%); }
-.cb-4 { background: linear-gradient(160deg, #c6d6f9 0%, #4060c4 100%); }
+.cb-1 { background: url('/images/cities/bangalore.jpg') center/cover; }
+.cb-2 { background: url('/images/cities/chennai.jpg') center/cover; }
+.cb-3 { background: url('/images/cities/coimbatore.jpg') center/cover; }
+.cb-4 { background: url('/images/cities/mangalore.jpg') center/cover; }
 .city-overlay {
   position: relative;
   z-index: 2;
